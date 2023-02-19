@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="heading">Discover a brand new meal!</h2>
+      <blockquote>
+        "Food is not just eating energy. It's an experience." - Guy Fieri
+      </blockquote>
+      <div class="search-container">
+        <form action="" method="post" id="form">
+          <span class="submit-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <select id="searchBy" name="searchBy">
+            <option value="name" selected>Recipe</option>
+            <option value="ingredient">Ingredient</option>
+            <optgroup label="Catagory">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Seafood">Seafood</option>
+              <option value="Starter">Starter</option>
+              <option value="Dessert">Dessert</option>
+            </optgroup>
+            <optgroup label="Area" name="strArea">
+              <option value="American">American</option>
+              <option value="British">British</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Indian">Indian</option>
+              <option value="Italian">Italian</option>
+            </optgroup>
+          </select>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="search a recipe"
+          />
+        </form>
+        <div class="btn-container">
+          <button class="btn fav">Favourite</button>
+          <button class="btn ran">Surprise me a Dish</button>
+        </div>
+      </div>
+      <h2 class="heading" style="font-weight: 600">search result:</h2>
+      <div class="meal-box">
+        <ul class="display"></ul>
+      </div>
+      <br />
+      <div class="modal hidden">
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="meal-details"></div>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/21b47651f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
