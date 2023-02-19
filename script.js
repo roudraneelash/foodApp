@@ -109,7 +109,7 @@ function toggle(likeBtn) {
 }
 //handle random recipe output
 function random() {
-  fetch("https:www.themealdb.com/api/json/v1/1/random.php")
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then((response) => response.json())
     .then((data) => {
       const meal = data.meals;
@@ -120,19 +120,19 @@ function random() {
 
 function searchUpdate(catagory, searchVal) {
   if (catagory == "name") {
-    link = `https:www.themealdb.com/api/json/v1/1/search.php?s=${searchVal}`;
+    link = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchVal}`;
   } else if (catagory == "ingredient") {
-    link = `https:www.themealdb.com/api/json/v1/1/filter.php?i=${searchVal}`;
+    link = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchVal}`;
   } else {
     const optgroup = searchBy.options[searchBy.selectedIndex].parentNode;
     if (optgroup.tagName === "OPTGROUP") {
       const optgroupLabel = optgroup.label;
 
       if (optgroupLabel == "Catagory") {
-        link = `https:www.themealdb.com/api/json/v1/1/filter.php?c=${catagory}`;
+        link = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${catagory}`;
       }
       if (optgroupLabel == "Area") {
-        link = `https:www.themealdb.com/api/json/v1/1/filter.php?a=${catagory}`;
+        link = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${catagory}`;
       }
     }
   }
@@ -158,7 +158,7 @@ fav.addEventListener("click", (e) => {
 
   Promise.all(
     favourite.map((fav) => {
-      const link = `https:www.themealdb.com/api/json/v1/1/lookup.php?i=${fav}`;
+      const link = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${fav}`;
       return fetch(link)
         .then((response) => response.json())
         .then((data) => {
